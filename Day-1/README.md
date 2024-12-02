@@ -26,7 +26,7 @@ int main() {
 This uses specifically more modern syntax, so I had to include `alias clang++='clang++ -std=c++17'` in my shell config file.
 
 ## Rust
-This file is to be run with `cargo run` from the `rust` directory.
+This project is to be run with `cargo run` from the `rust` directory.
 
 I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me a `part1.rs` and `part2.rs` with
 ```
