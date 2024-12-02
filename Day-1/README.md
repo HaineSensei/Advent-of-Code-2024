@@ -61,3 +61,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 ```
+
+## Haskell
+This project is to be run with `ghc haskell/partx.hs` for part $x$.
