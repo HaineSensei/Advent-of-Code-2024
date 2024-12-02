@@ -107,3 +107,21 @@ main = do
     let pairs = mapMaybe parseLine lines  -- mapMaybe filters out the Nothings
     printLn pairs  -- To verify what we got
 ```
+
+## TypeScript
+To run here, first run `npx tsc` to compile the TypeScript to JavaScript, then run `node src/part1.js` both from inside the typescript directory.
+
+I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
+```
+import * as fs from 'fs';
+
+const data: [number, number][] = fs.readFileSync('../data.txt', 'utf8')
+    .trim()
+    .split('\n')
+    .map(line => {
+        const nums = line.split('   ').filter(s => s.length > 0).map(Number);
+        return [nums[0], nums[1]] as [number, number];
+    });
+
+console.log(data);
+```
