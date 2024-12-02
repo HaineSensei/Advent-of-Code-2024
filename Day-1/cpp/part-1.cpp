@@ -9,5 +9,6 @@ int main() {
     while (file >> x >> y) {
         data_pairs.push_back({x, y});
     }
+    printf("Hi there.\n");
     return 0;
 }

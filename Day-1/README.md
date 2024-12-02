@@ -5,7 +5,7 @@ I started out with my most familiar language — Python — and tried to impleme
 Each file is designed to be run from the Day-1 directory unless otherwise specified (eg. Rust — see below).
 
 ## C++
-These files are to be run with `clang++ cpp/part-x.cpp -o cpp/out-x` or `g++ -std=c++17 cpp/part-x.cpp -o cpp/out-x` (I set up an alias for clang as mentioned later in this section).
+These files are to be compiled with `clang++ cpp/part-x.cpp -o cpp/out-x` or `g++ -std=c++17 cpp/part-x.cpp -o cpp/out-x` (I set up an alias for clang as mentioned later in this section), and then run with `./cpp/out-x`.
 
 I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
 ```
@@ -77,6 +77,33 @@ main = do
 ```
 
 ## OCaml
-This project should be run with `dune exec bin/main.exe` after running `dune build` both from within the `ocaml` directory.
+This project should be run with `dune exec bin/main.exe` after running `dune build` both from within the `ocaml` directory. I needed to install dune via `opam install core dune` after having run `eval $(opam env)`. 
 
-This took ages to set up to work... The basic files main.ml and lib.ml were entirely produced by Claude. Claude also helped me set up the dune environment to use the Core library for it, which was a lot of trouble considering that the final files part1.ml and part2.ml will not use that library at all.
+This took ages to set up to work... The basic files main.ml and lib.ml were entirely produced by Claude. Claude also helped me set up the dune environment to use the Core library for it, which was a lot of trouble considering that the final files part1.ml and part2.ml will likely not use that library at all. 
+
+## Idris
+This project should be compiled with `idris2 part1.idr -o part1` from in the idris folder, and then run with `./build/exec/part1` again from in the idris folder.
+
+I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
+```
+import System.File
+import Data.String
+
+parseLine : String -> Maybe (Integer, Integer)
+parseLine str = do
+    let words = words str  -- Split on whitespace
+    case words of
+        [x, y] => do
+            numX <- parseInteger x
+            numY <- parseInteger y
+            Just (numX, numY)
+        _ => Nothing
+
+main : IO ()
+main = do
+    Right contents <- readFile "../data.txt"
+        | Left err => putStrLn "Error reading file"
+    let lines = lines contents
+    let pairs = mapMaybe parseLine lines  -- mapMaybe filters out the Nothings
+    printLn pairs  -- To verify what we got
+```
