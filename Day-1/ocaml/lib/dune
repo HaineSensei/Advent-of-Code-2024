@@ -1,0 +1,5 @@
+(library
+ (name lib)
+ (public_name aoc_day01)
+ (modules lib part1 part2)
+ (libraries core))

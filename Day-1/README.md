@@ -63,4 +63,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 ```
 
 ## Haskell
-This project is to be run with `ghc haskell/partx.hs` for part x.
+This project is to be run with `ghc haskell/partx.hs` for part x followed by `./haskell/partx`.
+
+I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
+```
+main :: IO ()
+main = do
+    contents <- readFile "../data.txt"
+    let pairs = map ((\[x, y] -> (read x :: Int, read y :: Int)) . words) 
+                   (lines contents)
+    -- For testing, let's print the pairs
+    print pairs
+```
+
+## OCaml
+This project should be run with `dune exec bin/main.exe` after running `dune build` both from within the `ocaml` directory.
+
+This took ages to set up to work... The basic files main.ml and lib.ml were entirely produced by Claude. Claude also helped me set up the dune environment to use the Core library for it, which was a lot of trouble considering that the final files part1.ml and part2.ml will not use that library at all.

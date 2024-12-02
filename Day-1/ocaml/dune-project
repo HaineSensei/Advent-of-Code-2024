@@ -1,0 +1,6 @@
+(lang dune 3.16)
+(name aoc_day01)
+(package
+ (name aoc_day01)
+ (synopsis "Advent of Code 2024 Day 1")
+ (depends ocaml dune core))

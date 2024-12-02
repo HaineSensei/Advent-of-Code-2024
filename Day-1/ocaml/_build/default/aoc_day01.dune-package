@@ -1,0 +1,60 @@
+(lang dune 3.16)
+(name aoc_day01)
+(sections (lib .) (libexec .) (bin ../../bin))
+(files
+ (lib
+  (META
+   dune-package
+   lib.a
+   lib.cma
+   lib.cmi
+   lib.cmt
+   lib.cmx
+   lib.cmxa
+   lib.ml
+   lib__.cmi
+   lib__.cmt
+   lib__.cmx
+   lib__.ml
+   lib__Part1.cmi
+   lib__Part1.cmt
+   lib__Part1.cmx
+   lib__Part2.cmi
+   lib__Part2.cmt
+   lib__Part2.cmx
+   part1.ml
+   part2.ml))
+ (libexec (lib.cmxs))
+ (bin (aoc_day01)))
+(library
+ (name aoc_day01)
+ (kind normal)
+ (archives (byte lib.cma) (native lib.cmxa))
+ (plugins (byte lib.cma) (native lib.cmxs))
+ (native_archives lib.a)
+ (requires core)
+ (main_module_name Lib)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name lib__)
+     (visibility public)
+     (kind alias)
+     (source (path Lib__) (impl (path lib__.ml-gen))))
+    (name Lib)
+    (modules
+     (module
+      (obj_name lib)
+      (visibility public)
+      (source (path Lib) (impl (path lib.ml))))
+     (module
+      (obj_name lib__Part1)
+      (visibility public)
+      (source (path Part1) (impl (path part1.ml))))
+     (module
+      (obj_name lib__Part2)
+      (visibility public)
+      (source (path Part2) (impl (path part2.ml))))))
+   (wrapped true))))

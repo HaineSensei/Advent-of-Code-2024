@@ -1,0 +1,29 @@
+lib: [
+  "_build/install/default/lib/aoc_day01/META"
+  "_build/install/default/lib/aoc_day01/dune-package"
+  "_build/install/default/lib/aoc_day01/lib.a"
+  "_build/install/default/lib/aoc_day01/lib.cma"
+  "_build/install/default/lib/aoc_day01/lib.cmi"
+  "_build/install/default/lib/aoc_day01/lib.cmt"
+  "_build/install/default/lib/aoc_day01/lib.cmx"
+  "_build/install/default/lib/aoc_day01/lib.cmxa"
+  "_build/install/default/lib/aoc_day01/lib.ml"
+  "_build/install/default/lib/aoc_day01/lib__.cmi"
+  "_build/install/default/lib/aoc_day01/lib__.cmt"
+  "_build/install/default/lib/aoc_day01/lib__.cmx"
+  "_build/install/default/lib/aoc_day01/lib__.ml"
+  "_build/install/default/lib/aoc_day01/lib__Part1.cmi"
+  "_build/install/default/lib/aoc_day01/lib__Part1.cmt"
+  "_build/install/default/lib/aoc_day01/lib__Part1.cmx"
+  "_build/install/default/lib/aoc_day01/lib__Part2.cmi"
+  "_build/install/default/lib/aoc_day01/lib__Part2.cmt"
+  "_build/install/default/lib/aoc_day01/lib__Part2.cmx"
+  "_build/install/default/lib/aoc_day01/part1.ml"
+  "_build/install/default/lib/aoc_day01/part2.ml"
+]
+libexec: [
+  "_build/install/default/lib/aoc_day01/lib.cmxs"
+]
+bin: [
+  "_build/install/default/bin/aoc_day01"
+]
