@@ -1,4 +1,4 @@
-data_in = open("data.txt",'r')
+data_in = open("../data.txt",'r')
 data_pairs : list[tuple[int,int]] = [(int(x),int(y)) for x,y in 
                                [line.split('   ') for line in data_in]]
 data : tuple[list[int],list[int]] = ([x for x,_ in data_pairs],[y for _,y in data_pairs])
