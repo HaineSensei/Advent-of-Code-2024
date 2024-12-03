@@ -2,6 +2,7 @@
 I started out with my most familiar language — Python — and tried to implement similar things in other languages. The Python files I wrote on my own, the other implementations I had help from claude.ai details to follow.
 
 ## C++
+**COMPLETE**
 These files are to be compiled with `clang++ partx.cpp -o partx` or `g++ -std=c++17 partx.cpp -o partx` (I set up an alias for clang as mentioned later in this section), and then run with `.partx` all run from in the cpp folder
 
 I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
@@ -109,6 +110,7 @@ main = do
 ```
 
 ## TypeScript
+**COMPLETE**
 To run here, first run `npx tsc` to compile the TypeScript to JavaScript, then run `node src/part1.js` both from inside the typescript directory.
 
 I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
