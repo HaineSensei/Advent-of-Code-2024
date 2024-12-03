@@ -23,7 +23,7 @@ int main() {
     return 0;
 }
 ```
-This uses specifically more modern syntax, so I had to include `alias clang++='clang++ -std=c++17'` in my shell config file.
+This uses specifically more modern syntax, so I had to include `alias clang++='clang++ -std=c++17'` in my shell config file. In the end, my final version did not feature these same syntax features, however it does use a C++11 extension for a loop.
 
 ## Rust
 This project is to be run with `cargo run` from the `rust` directory.
