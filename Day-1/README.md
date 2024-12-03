@@ -1,25 +1,25 @@
 # Day 1 details
 I started out with my most familiar language — Python — and tried to implement similar things in other languages. The Python files I wrote on my own, the other implementations I had help from claude.ai details to follow.
 
-## Overview
-Each file is designed to be run from the Day-1 directory unless otherwise specified (eg. Rust — see below).
-
 ## C++
-These files are to be compiled with `clang++ cpp/part-x.cpp -o cpp/out-x` or `g++ -std=c++17 cpp/part-x.cpp -o cpp/out-x` (I set up an alias for clang as mentioned later in this section), and then run with `./cpp/out-x`.
+These files are to be compiled with `clang++ partx.cpp -o partx` or `g++ -std=c++17 partx.cpp -o partx` (I set up an alias for clang as mentioned later in this section), and then run with `.partx` all run from in the cpp folder
 
 I started out by asking Claude for a way to import the file and split it in the same manner as the Python file, which quickly got me
 ```
 #include <fstream>
 #include <vector>
 #include <utility>
+#include <iostream>
 
 int main() {
-    std::ifstream file("part-1-data.txt");
+    std::ifstream file("../data.txt");
     std::vector<std::pair<int, int>> data_pairs;
     int x, y;
     while (file >> x >> y) {
         data_pairs.push_back({x, y});
     }
+
+    std::cout << data_pairs[0].first << std::endl;
     return 0;
 }
 ```
