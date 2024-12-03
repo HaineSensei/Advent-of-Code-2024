@@ -9,8 +9,8 @@ const data: [number, number][] = fs.readFileSync('../data.txt', 'utf8')
     });
 const data_first: number[] = data.map(a => a[0]).sort();
 const data_second: number[] = data.map(a => a[1]).sort();
-let total: number = 0;
-for (let i = 0; i< data_first.length; i++) {
-    total += Math.abs(data_first[i] - data_second[i]);
+let sim_score: number = 0;
+for (const x of data_first) {
+    sim_score += x*data_second.filter(y => y === x).length;
 }
-console.log(total);
+console.log(sim_score);
