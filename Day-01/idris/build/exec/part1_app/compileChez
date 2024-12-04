@@ -1,1 +1,1 @@
-(parameterize ([optimize-level 3] [compile-file-message #f]) (compile-program "/Users/danielroffey/Documents/GitHub/Advent-of-Code-2024/Day-1/idris/build/exec/part1_app/part1.ss"))
+(parameterize ([optimize-level 3] [compile-file-message #f]) (compile-program "/Users/danielroffey/Documents/GitHub/Advent-of-Code-2024/Day-01/idris/build/exec/part1_app/part1.ss"))

@@ -1,0 +1,2 @@
+# Day 2 details
+Today, I worked from yesterday's starting Idris file with some help from Claude to produce the main Idris file first. I then used Claude to translate the Idris code I wrote to Haskell since I noticed that I hadn't really done anything in Idris that utilised the dependent types. To run the files use the same processes as described yesterday.
